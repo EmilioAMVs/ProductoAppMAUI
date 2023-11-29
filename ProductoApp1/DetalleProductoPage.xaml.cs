@@ -29,8 +29,12 @@ public partial class DetalleProductoPage : ContentPage
     private async void OnClickBorrar(object sender, EventArgs e)
     {
         //Utils.Utils.ListaProductos.Remove(_producto);
-        await _APIService.DeleteProducto(_producto.IdProducto);
-        await Navigation.PopAsync();
+        var confirmarEliminar = await DisplayAlert("Confirmar Eliminacion", "Seguro deseas eliminar el producto", "Si", "No");
+        if (confirmarEliminar) 
+        { 
+            await _APIService.DeleteProducto(_producto.IdProducto);
+            await Navigation.PopAsync();
+        }
     }
 
     private async void OnClickEditar(object sender, EventArgs e)

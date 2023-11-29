@@ -26,12 +26,6 @@
                     FontSize="18"/>
         </StackLayout>
         <StackLayout Orientation="Horizontal">
-            <Button Text="Borrar"
-                Clicked="OnClickBorrar"
-                FontSize="20"
-                Margin="5"
-                HorizontalOptions="FillAndExpand"
-                BackgroundColor="Red"/>
             <Button Text="Editar"
                 Clicked="OnClickEditar"
                 FontSize="20"
@@ -39,6 +33,12 @@
                 HorizontalOptions="FillAndExpand"
                 TextColor="Black"
                 BackgroundColor="Orange"/>
+            <Button Text="Eliminar"
+                Clicked="OnClickBorrar"
+                FontSize="20"
+                Margin="5"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="Red"/> 
         </StackLayout>
         
     </VerticalStackLayout>
